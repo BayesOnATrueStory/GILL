@@ -222,8 +222,6 @@ End Sub
 'the meat of the .bas! default installation is this unless a file is specified.
 ' For 3 categories (pricing, reserving, reinsurance) plus 1 freebie (XINTERP)
 
-'I've been eating VBA for lunch and dinner. I'm following a macro diet.
-
 '-----------------------------FUNCTION REGISTRY---------------------------------------------
 
 ' For each function, assign name + description + formula + probe. Then GILL_Count will swoop
@@ -391,6 +389,8 @@ Public Function GILL_Registry() As Variant
                         "IF(SUM(wt)=0,NA(),SUM(ft*wt)/SUM(wt)))))))," & _
                 "NA())))))"
     gillcol.Add Array("LDF_SELECT", "Selects LDFs using simple, medial, or volume-weighted averages; skips blanks and text, so a column from a factor triangle works as-is", f, "LDF_SELECT({1.892;1.756;2.104;1.834;1.901},""medial"")")
+
+'I've been eating VBA for lunch and dinner. I'm following a macro diet.
 
     'ULTIMATE
     f = "LAMBDA(reported,cdf,[method],[elr],[premium]," & _
